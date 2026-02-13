@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100%_Not_Virus_Or_Scam.exe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 20px;
+        }
+        #main-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        #question {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 18px;
+            padding: 12px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+        #yes-btn {
+            background-color: pink;
+        }
+        #no-btn {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- IMAGE -->
+    <img id="main-image" src="asking_out.jpg" alt="Valentine Image">
+
+    <!-- QUESTION TEXT -->
+    <div id="question">will u be my valentine plz &lt;3</div>
+
+    <!-- BUTTONS -->
+    <button id="yes-btn">yes!!</button>
+    <button id="no-btn">nope :p</button>
+
+    <script>
+        let noCount = 0;
+
+        const mainImage = document.getElementById("main-image");
+        const question = document.getElementById("question");
+        const yesBtn = document.getElementById("yes-btn");
+        const noBtn = document.getElementById("no-btn");
+
+        yesBtn.addEventListener("click", () => {
+            question.textContent = "hehe i have u trapped loser <33";
+            mainImage.src = "heh.jpg";
+            yesBtn.disabled = true;
+            noBtn.style.display = "none";
+        });
+
+        noBtn.addEventListener("click", () => {
+            noCount += 1;
+
+            if (noCount === 1) {
+                question.textContent = "wrong answer :O";
+                mainImage.src = "plz_notice.jpg";
+                yesBtn.style.fontSize = "20px";
+            } else if (noCount === 2) {
+                question.textContent = "r u sure??";
+                mainImage.src = "no00.jpg";
+                yesBtn.style.fontSize = "24px";
+            } else if (noCount === 3) {
+                question.textContent = "u actually hate me 😭";
+                mainImage.src = "crying_real_bad.jpg";
+                yesBtn.style.fontSize = "28px";
+            } else if (noCount >= 4) {
+                question.textContent = "nerd";
+                mainImage.src = "nerd.jpg";
+                noBtn.style.display = "none";
+                yesBtn.style.fontSize = "32px";
+            }
+        });
+    </script>
+
+</body>
+</html>
+
